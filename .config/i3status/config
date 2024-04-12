@@ -1,0 +1,48 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        interval = 5
+}
+
+order += "volume master"
+order += "wireless _first_"
+order += "battery all"
+order += "disk /"
+order += "memory"
+order += "tztime local"
+
+volume master {
+        format = "♪: %volume"
+        format_muted = "♪: muted (%volume)"
+        device = "pulse:alsa_output.pci-0000_07_00.6.HiFi__hw_Generic_1__sink"
+}
+
+wireless _first_ {
+        format_up = "🛜 %essid %quality"
+        format_down = "W: down"
+}
+
+battery all {
+        format = "🔋 %percentage %remaining"
+}
+
+disk "/" {
+        format = "Disk Available: %avail"
+}
+
+memory {
+        format = "Memory: %used / %available"
+        threshold_degraded = "1G"
+        format_degraded = "MEMORY < %available"
+}
+
+tztime local {
+        format = "%Y-%m-%d %H:%M:%S"
+}
