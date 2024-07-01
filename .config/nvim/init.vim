@@ -22,6 +22,6 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 set tabstop=4
 set shiftwidth=4
-set clipboard+=unnamedplus
+set clipboard=unnamedplus
 set spell
 
