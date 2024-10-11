@@ -24,3 +24,11 @@ require("nvim-tree").setup({
   },
 })
 require("autoclose").setup()
+
+vim.opt.number = true
+vim.opt.updatetime = 100
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.clipboard = 'unnamedplus'
+vim.opt.spell = true
+

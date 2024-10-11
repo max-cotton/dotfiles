@@ -1,0 +1,12 @@
+{
+  "autoclose.nvim": { "branch": "main", "commit": "b2077aa2c83df7ebc19b2a20a3a0654b24ae9c8f" },
+  "coc.nvim": { "branch": "master", "commit": "9fd857818977ce9f9f6f7271034fc917dede7035" },
+  "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
+  "nvim-tree.lua": { "branch": "master", "commit": "5ad87620ec9d1190d15c88171a3f0122bc16b0fe" },
+  "nvim-treesitter": { "branch": "master", "commit": "19079207ba4a8c7ed956f40a111a22b1a2dfa6e8" },
+  "presence.nvim": { "branch": "main", "commit": "87c857a56b7703f976d3a5ef15967d80508df6e6" },
+  "tokyonight.nvim": { "branch": "main", "commit": "2c85fad417170d4572ead7bf9fdd706057bd73d7" },
+  "vim-gitgutter": { "branch": "main", "commit": "7b0b5098e3e57be86bb96cfbf2b8902381eef57c" },
+  "vim-smooth-scroll": { "branch": "master", "commit": "0eae2367c70c3415b97869346af1b5e30c123dff" },
+  "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" }
+}
