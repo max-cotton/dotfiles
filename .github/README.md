@@ -14,3 +14,9 @@
   git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
   ```
 
+3. Apply new .bashrc file contents to current terminal session with:
+
+- ```
+  source ~/.bashrc
+  ```
+
