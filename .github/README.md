@@ -7,15 +7,16 @@
 - ```
   git clone --bare https://github.com/mcttn22/dotfiles.git ~/.dotfiles
   ```
-2. Apply new .bashrc file contents to current terminal session with:
+
+2. Update files to .dotfiles contents with:
+
+- ```
+  /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
+  ```
+
+3. Apply new .bashrc file contents to current terminal session with:
 
 - ```
   source ~/.bashrc
-  ```
-
-3. Update files to .dotfiles contents with:
-
-- ```
-  dotfiles checkout
   ```
 
