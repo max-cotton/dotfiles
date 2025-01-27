@@ -26,5 +26,3 @@
   dotfiles config --local status.showUntrackedFiles no
   ```
 
-*Note: The autostart scripts expect an image ~/Pictures/maxwell-the-cat.png and the cava, firefox, kitty and ollama packages*
-
