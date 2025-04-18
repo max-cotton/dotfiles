@@ -1,0 +1,29 @@
+{
+    "layer": "top",
+    "modules-left": [],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "network", "battery", "clock"],
+	"pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{volume}% volume",
+        "format-bluetooth": "{volume}% volume bluetooth",
+        "format-bluetooth-muted": "muted bluetooth",
+        "format-muted": "muted",
+        "on-click": "pavucontrol"
+    },
+	"network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "battery": {
+        "format": "{capacity}% {icon} battery"
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    }
+}
