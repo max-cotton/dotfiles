@@ -32,7 +32,7 @@ tooltip label {
     border-bottom: 3px solid white;
 }
 
-#mode, #pulseaudio, #network, #clock, #battery {
+#mode, #pulseaudio, #network, #backlight, #battery, #clock {
     padding: 0 10px;
 }
 
@@ -57,6 +57,10 @@ tooltip label {
 
 #network {
     background-color: #2980b9;
+}
+
+#backlight {
+    background-color: #90b1b1;
 }
 
 #network.disconnected {

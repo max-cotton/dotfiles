@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": [],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "network", "battery", "clock"],
+    "modules-right": ["pulseaudio", "network", "backlight", "battery", "clock"],
 	"pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% volume",
@@ -19,6 +19,10 @@
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "Disconnected",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+	"backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% brightness"
     },
     "battery": {
         "format": "{capacity}% {icon} battery"
