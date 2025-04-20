@@ -42,51 +42,54 @@ tooltip label {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
+    background-color: #3b4252;
+    color: #eceff4;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: #4c566a;
+    color: #d8dee9;
 }
 
 #pulseaudio:hover {
-    background-color: #a37800;
+    background-color: #d08770;
 }
 
 #network {
-    background-color: #2980b9;
-}
-
-#backlight {
-    background-color: #90b1b1;
+    background-color: #5e81ac;
+	color: #eceff4;
 }
 
 #network.disconnected {
-    background-color: #f53c3c;
+    background-color: #bf616a;
+	color: #eceff4;
+}
+
+#backlight {
+    background-color: #434c5e;
+	color: #eceff4;
 }
 
 #battery {
-    background-color: #ffffff;
-    color: black;
+    background-color: #2e3440;
+    color: #d8dee9;
 }
 
 #battery.charging {
-    color: white;
-    background-color: #26A65B;
+    background-color: #a3be8c;
+    color: #2e3440;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: black;
+        background-color: #eceff4;
+        color: #2e3440;
     }
 }
 
 #battery.warning:not(.charging) {
-    background: #f53c3c;
-    color: white;
+    background: #d08770;
+    color: #2e3440;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: steps(12);
@@ -95,6 +98,7 @@ tooltip label {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: #4c566a;
+	color: #eceff4;
 }
 
