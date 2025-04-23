@@ -1,8 +1,15 @@
 {
     "layer": "top",
-    "modules-left": [],
+    "modules-left": ["hyprland/workspaces"],
     "modules-center": [],
     "modules-right": ["pulseaudio", "network", "backlight", "battery", "clock"],
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			"1": "Code",
+			"2": "Web"
+		}
+	},
 	"pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% volume",
