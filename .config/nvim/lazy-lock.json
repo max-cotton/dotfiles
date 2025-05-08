@@ -1,7 +1,7 @@
 {
   "autoclose.nvim": { "branch": "main", "commit": "b2077aa2c83df7ebc19b2a20a3a0654b24ae9c8f" },
   "coc.nvim": { "branch": "master", "commit": "9fd857818977ce9f9f6f7271034fc917dede7035" },
-  "lazy.nvim": { "branch": "main", "commit": "077102c5bfc578693f12377846d427f49bc50076" },
+  "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "nvim-tree.lua": { "branch": "master", "commit": "5ad87620ec9d1190d15c88171a3f0122bc16b0fe" },
   "nvim-treesitter": { "branch": "master", "commit": "19079207ba4a8c7ed956f40a111a22b1a2dfa6e8" },
   "presence.nvim": { "branch": "main", "commit": "87c857a56b7703f976d3a5ef15967d80508df6e6" },
