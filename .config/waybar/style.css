@@ -30,45 +30,41 @@ tooltip label {
 	margin: 0 2px;
 	border-radius: 5px;
     background: transparent;
-    color: white;
+    color: #e0e6f0;
 }
 
 #workspaces button.active {
-    background: #64727D;
+    background: #3b4252;
 }
 
 #pulseaudio {
     background-color: #3b4252;
-    color: #eceff4;
+    color: #e0e6f0;
 }
 
 #pulseaudio.muted {
-    background-color: #4c566a;
-    color: #d8dee9;
-}
-
-#pulseaudio:hover {
-    background-color: #d08770;
+    background-color: #bf616a;
+    color: #eceff4;
 }
 
 #network {
-    background-color: #5e81ac;
-	color: #eceff4;
+    background-color: #3b4252;
+    color: #e0e6f0;
 }
 
 #network.disconnected {
     background-color: #bf616a;
-	color: #eceff4;
+    color: #eceff4;
 }
 
 #backlight {
-    background-color: #434c5e;
-	color: #eceff4;
+    background-color: #3b4252;
+	color: #e0e6f0;
 }
 
 #battery {
-    background-color: #2e3440;
-    color: #d8dee9;
+    background-color: #3b4252;
+    color: #e0e6f0;
 }
 
 #battery.charging {
@@ -94,7 +90,7 @@ tooltip label {
 }
 
 #clock {
-    background-color: #4c566a;
-	color: #eceff4;
+    background-color: #3b4252;
+	color: #e0e6f0;
 }
 
