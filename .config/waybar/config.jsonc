@@ -6,18 +6,19 @@
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
-			"1": "Code",
-			"2": "Web",
-			"3": "Music",
-			"4": "Discord"
+			"1": "",
+			"2": "󰈹",
+			"3": "󰝚",
+			"4": ""
 		}
 	},
 	"pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% volume",
+        "format": "{volume}% {icon}",
+		"format-icons": ["", "", ""],
         "format-bluetooth": "{volume}% volume bluetooth",
         "format-bluetooth-muted": "muted bluetooth",
-        "format-muted": "muted",
+        "format-muted": "",
         "on-click": "pavucontrol"
     },
 	"network": {
@@ -31,10 +32,12 @@
     },
 	"backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% brightness"
+        "format": "{percent}% {icon}",
+		"format-icons": ["󰃞", "󰃟", "󰃠"]
     },
     "battery": {
-        "format": "{capacity}% {icon} battery"
+        "format": "{capacity}% {icon}",
+		"format-icons": ["", "", "", "", ""]
     },
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
