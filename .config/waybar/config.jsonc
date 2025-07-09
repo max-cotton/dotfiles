@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["tray"],
-    "modules-right": ["pulseaudio", "backlight", "battery", "clock"],
+    "modules-right": ["cpu", "memory", "pulseaudio", "backlight", "battery", "custom/updates", "custom/weather", "clock"],
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
@@ -12,26 +12,19 @@
 			"4": ""
 		}
 	},
+	"cpu": {
+		"format": "{usage}% 󰻠"
+	},
+	"memory": {
+		"format": "{percentage}% "
+	},
 	"pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
 		"format-icons": ["", "", ""],
-        "format-bluetooth": "{volume}% volume bluetooth",
-        "format-bluetooth-muted": "muted bluetooth",
         "format-muted": "",
         "on-click": "pavucontrol"
     },
-	"network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%)",
-        "format-ethernet": "{ipaddr}/{cidr}",
-        "tooltip-format": "{ifname} via {gwaddr}",
-        "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "Disconnected",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
 	"backlight": {
-        // "device": "acpi_video1",
         "format": "{percent}% {icon}",
 		"format-icons": ["󰃞", "󰃟", "󰃠"]
     },
@@ -39,7 +32,25 @@
         "format": "{capacity}% {icon}",
 		"format-icons": ["", "", "", "", ""]
     },
+	"custom/updates": {
+		"format": "{} {icon}",
+		"return-type": "json",
+		"format-icons": {
+			"has-updates": "󱍷",
+			"updated": "󰂪"
+		},
+		"exec-if": "which waybar-module-pacman-updates",
+		"exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
+	},
+	"custom/weather": {
+		"format": "{}°",
+		"tooltip": true,
+		"interval": 3600,
+		"exec": "wttrbar",
+		"return-type": "json"
+	},
     "clock": {
-        "format-alt": "{:%a, %d. %b  %H:%M}"
+		"tooltip-format": "{:%a %d %b %G  %H:%M}"
     }
 }
+
