@@ -30,7 +30,8 @@
     },
     "battery": {
         "format": "{capacity}% {icon}",
-		"format-icons": ["", "", "", "", ""]
+		"format-icons": ["", "", "", "", ""],
+		"format-charging": "{capacity}% 󰂄"
     },
 	"custom/updates": {
 		"format": "{} {icon}",
