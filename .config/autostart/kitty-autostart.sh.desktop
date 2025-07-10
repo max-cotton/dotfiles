@@ -1,6 +1,0 @@
-[Desktop Entry]
-Exec=/home/max/.config/old-autostart-scripts/kitty-autostart.sh
-Icon=application-x-executable-script
-Name=kitty-autostart.sh
-Type=Application
-X-KDE-AutostartScript=true

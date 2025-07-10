@@ -1,6 +1,0 @@
-[Desktop Entry]
-Exec=/home/max/.config/old-autostart-scripts/firefox-autostart.sh
-Icon=application-x-executable-script
-Name=firefox-autostart.sh
-Type=Application
-X-KDE-AutostartScript=true
