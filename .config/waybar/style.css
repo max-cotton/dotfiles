@@ -38,12 +38,15 @@ tooltip label {
 }
 
 #custom-updates {
-    background-color: #3b4252;
     color: #e0e6f0;
 }
 
 #custom-updates.updated {
     background-color: transparent;
+}
+
+#custom-updates.has-updates {
+    background-color: #3b4252;
 }
 
 #pulseaudio {
