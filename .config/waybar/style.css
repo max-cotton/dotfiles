@@ -19,7 +19,7 @@ tooltip label {
   color: white;
 }
 
-#workspaces, #cpu, #memory, #pulseaudio, #backlight, #battery, #custom-updates, #custom-weather, #clock {
+#workspaces, #custom-updates, #cpu, #memory, #pulseaudio, #backlight, #battery, #custom-weather, #clock {
     padding: 0 10px;
 	margin: 2 2px;
 	border-radius: 5px;
@@ -35,6 +35,15 @@ tooltip label {
 
 #workspaces button.active {
     background: #3b4252;
+}
+
+#custom-updates {
+    background-color: #3b4252;
+    color: #e0e6f0;
+}
+
+#custom-updates.updated {
+    background-color: transparent;
 }
 
 #pulseaudio {
@@ -87,11 +96,6 @@ tooltip label {
     animation-timing-function: steps(12);
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}
-
-#custom-updates {
-    background-color: #3b4252;
-    color: #e0e6f0;
 }
 
 #custom-weather {

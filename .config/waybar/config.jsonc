@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["tray"],
-    "modules-right": ["cpu", "memory", "pulseaudio", "backlight", "battery", "custom/updates", "custom/weather", "clock"],
+    "modules-right": ["custom/updates", "cpu", "memory", "pulseaudio", "backlight", "battery", "custom/weather", "clock"],
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
@@ -11,6 +11,16 @@
 			"3": "󰝚",
 			"4": ""
 		}
+	},
+	"custom/updates": {
+		"format": "{} {icon}",
+		"return-type": "json",
+		"format-icons": {
+			"has-updates": "󱍷",
+			"updated": ""
+		},
+		"exec-if": "which waybar-module-pacman-updates",
+		"exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300 --no-zero-output"
 	},
 	"cpu": {
 		"format": "{usage}% 󰻠"
@@ -33,16 +43,6 @@
 		"format-icons": ["", "", "", "", ""],
 		"format-charging": "{capacity}% 󰂄"
     },
-	"custom/updates": {
-		"format": "{} {icon}",
-		"return-type": "json",
-		"format-icons": {
-			"has-updates": "󱍷",
-			"updated": "󰂪"
-		},
-		"exec-if": "which waybar-module-pacman-updates",
-		"exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300"
-	},
 	"custom/weather": {
 		"format": "{}°",
 		"tooltip": true,
