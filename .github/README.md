@@ -12,23 +12,23 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
 
 2. Apply the following manual configuration:
 
-- Replace the monitor name in ~/.config/hypr/hyprland.conf and ~/.config/hypr/hyprpaper.conf with the name outputted by `hyprctl monitors all`
+    1. Replace the monitor name in ~/.config/hypr/hyprland.conf and ~/.config/hypr/hyprpaper.conf with the name outputted by `hyprctl monitors all`
 
-- Set the wallpaper and lockscreen by creating the following symlinks:
+    2. Set the wallpaper and lockscreen by creating the following symlinks:
 
-  - ```
-    ln -s path-to-image ~/Pictures/wallpaper
-    ```
+      - ```
+        ln -s path-to-image ~/Pictures/wallpaper
+        ```
 
-  - ```
-    ln -s path-to-image ~/Pictures/lock-screen
-    ```
+      - ```
+        ln -s path-to-image ~/Pictures/lock-screen
+        ```
 
-  - Apply changes with `sudo systemctl restart sddm`
+    3. Add `location` flag with a value (e.g. Postcode) to `wttrbar` command in ~/.config/waybar/config.jsonc for accurate weather
 
-- Add `location` flag with a value (e.g. Postcode) to `wttrbar` command in ~/.config/waybar/config.jsonc for accurate weather
+    4. Apply changes with `sudo systemctl restart sddm`
 
-- *Note: Some applications such as Discord appear pixelated on Wayland unless you add the `--enable-features=UseOzonePlatform --ozone-platform=wayland` flag to their executable. This can be done by adding a desktop entry with the flag to .local/share/applications/*
+    *Note: Some applications such as Discord appear pixelated on Wayland unless you add the `--enable-features=UseOzonePlatform --ozone-platform=wayland` flag to their executable. This can be done by adding a desktop entry with the flag to ~/.local/share/applications/*
 
 ## Updating
 
