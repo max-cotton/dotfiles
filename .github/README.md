@@ -10,11 +10,11 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
    bash <(curl https://raw.githubusercontent.com/mcttn22/dotfiles/refs/heads/main/.github/setup.sh)
    ```
 
-2. Apply the following manual configuration:
+2. Apply the following manual configurations:
 
     1. Replace the monitor name in ~/.config/hypr/hyprland.conf and ~/.config/hypr/hyprpaper.conf with the name outputted by `hyprctl monitors all`
 
-    2. Set the wallpaper and lockscreen by creating the following symlinks:
+    2. Set the home and lockscreen wallpapers by creating the following symlinks:
 
       - ```
         ln -s path-to-image ~/Pictures/wallpaper
@@ -24,7 +24,7 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
         ln -s path-to-image ~/Pictures/lock-screen
         ```
 
-    3. Add `location` flag with a value (e.g. Postcode) to `wttrbar` command in ~/.config/waybar/config.jsonc for accurate weather
+    3. Add `--location` flag with a value (e.g. Postcode) to `wttrbar` command in ~/.config/waybar/config.jsonc for accurate weather
 
     4. Apply changes with `sudo systemctl restart sddm`
 
