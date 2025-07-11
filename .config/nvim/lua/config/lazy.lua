@@ -29,7 +29,7 @@ vim.opt.number = true
 vim.opt.updatetime = 100
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 vim.opt.spell = true
 
 -- Setup lazy.nvim

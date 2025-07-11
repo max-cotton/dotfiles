@@ -1,3 +1,4 @@
 return {
-    { 'mason-org/mason.nvim', config = true, opts = {} },
+    { "mason-org/mason.nvim", config = true, opts = {} }
 }
+
