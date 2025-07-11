@@ -1,5 +1,7 @@
 # My Dotfiles
 
+My Hyprland and Neovim configuration files.
+
 ## Installation
 
 The expected use case is an Arch Linux installation with Sudo setup for the user account. Then follow the following steps:
