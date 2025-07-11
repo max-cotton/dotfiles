@@ -1,36 +1,45 @@
 #!/bin/bash
 
 # Create home subdirectories
-echo "Creating home subdirectories"
-mkdir -p $HOME/Documents $HOME/Downloads $HOME/Music $HOME/Pictures $HOME/programming/projects $HOME/temp
+echo -e "\e[32mCreating home subdirectories\e[0m"
+mkdir -p "$HOME/Documents" "$HOME/Downloads" "$HOME/Music" "$HOME/Pictures" "$HOME/programming/projects" "$HOME/temp"
 
 # Install yay if not installed
 if ! command -v yay > /dev/null 2>&1; then
-	echo "Installing yay"
+	echo -e "\e[32mInstalling yay\e[0m"
 	sudo pacman -S --needed git base-devel
-	[ -d $HOME/Downloads/yay ] && rm -rf $HOME/Downloads/yay
-	git clone https://aur.archlinux.org/yay.git $HOME/Downloads/yay
-	(cd $HOME/Downloads/yay && makepkg -si)
-	rm -rf $HOME/Downloads/yay
+	[ -d "$HOME/Downloads/yay" ] && rm -rf "$HOME/Downloads/yay"
+	git clone https://aur.archlinux.org/yay.git "$HOME/Downloads/yay"
+	(cd "$HOME/Downloads/yay" && makepkg -si)
+	rm -rf "$HOME/Downloads/yay"
 fi
 
 # Clone and checkout dotfiles
-if [ -d $HOME/.dotfiles ]; then
+if [ -d "$HOME/.dotfiles" ]; then
 	echo -e "\e[31mError:\e[0m Directory .dotfiles already exists, please remove or backup this directory first"
 	exit 1
 else
-	echo "Cloning and checking out dotfiles"
-	git clone --bare https://github.com/mcttn22/dotfiles.git $HOME/.dotfiles
-	git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
-	git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
+	echo -e "\e[32mCloning and checking out dotfiles\e[0m"
+	git clone --bare https://github.com/mcttn22/dotfiles.git "$HOME/.dotfiles"
+
+	if [ -f "$HOME/.bashrc" ]; then
+		echo -e "\e[31mError:\e[0m File .bashrc already exists, please remove or backup this file first"
+		exit 1
+	elif [ -d "$HOME/.github" ]; then
+		echo -e "\e[31mError:\e[0m Directory .github already exists, please remove or backup this directory first"
+		exit 1
+	fi
+
+	git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" checkout
+	git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" config --local status.showUntrackedFiles no
 fi
 
 # Sync and update current packages
-echo "Syncing and updating current packages"
+echo -e "\e[32mSyncing and updating current packages\e[0m"
 yay -Syu
 
 # Installed required packages
-echo "Installing required packages"
+echo -e "\e[32mInstalling required packages\e[0m"
 yay -S --needed \
 	sddm \
 	hyprland \
@@ -60,6 +69,7 @@ yay -S --needed \
 	firefox \
 	cmus \
 	cava \
+	discord \
 	fastfetch \
 	nerd-fonts \
 	grim \
@@ -69,10 +79,10 @@ yay -S --needed \
 	npm
 
 # Enable network manager service for nm applet
-echo "Enable and start NetworkManager service for NM applet"
+echo -e "\e[32mEnable and start NetworkManager service for NM applet\e[0m"
 sudo systemctl enable --now NetworkManager
 
 # Enable sddm service
-echo "Enable and start sddm service"
+echo -e "\e[32mEnable and start sddm service\e[0m"
 sudo systemctl enable --now sddm
 
