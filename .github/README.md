@@ -10,7 +10,9 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
    bash <(curl https://raw.githubusercontent.com/mcttn22/dotfiles/refs/heads/main/.github/setup.sh)
    ```
 
-2. Apply the following manual configurations:
+2. Select "Hyprland" as the session (not "Hyprland (uwsm-managed)")
+
+3. Apply the following manual configurations:
 
     1. Replace the monitor name in ~/.config/hypr/hyprland.conf and ~/.config/hypr/hyprpaper.conf with the name outputted by `hyprctl monitors all`
 
