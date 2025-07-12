@@ -1,5 +1,11 @@
 # My Dotfiles
 
+<div align="center">
+    <img src="images/screenshot-1.png" width="600">
+    <img src="images/screenshot-2.png" width="400" style="display: inline-block">
+    <img src="images/screenshot-3.png" width="400" style="display: inline-block">
+</div><br/>
+
 My Hyprland and Neovim configuration files.
 
 ## Installation
