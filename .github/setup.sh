@@ -19,9 +19,11 @@ echo -e "\e[32mCloning and checking out dotfiles\e[0m"
 if ! git clone --bare https://github.com/mcttn22/dotfiles.git "$HOME/.dotfiles"; then
 	echo -e "\e[31mError:\e[0m Failed to clone dotfiles repository"
 	exit 1
+fi
 if ! git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" checkout; then
 	echo -e "\e[31mError:\e[0m Failed to checkout dotfiles"
 	exit 1
+fi
 git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" config --local status.showUntrackedFiles no
 
 # Sync and update current packages
