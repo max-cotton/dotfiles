@@ -34,7 +34,7 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
         ln -s path-to-image ~/Pictures/lock-screen-wallpaper
         ```
 
-    3. Set the SDDM wallpaper with the following:
+    3. Set the SDDM wallpaper with the following:<br/><br/>
 
       - ```
         sudo cp -L ~/Pictures/lock-screen-wallpaper /usr/share/sddm/themes/Sugar-Candy/Backgrounds/
@@ -55,6 +55,8 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
 ## Updating
 
 You can stay up to date with the latest configuration by running `dotfiles pull`
+
+*Note: To apply SDDM theme configuration updates, you have to run ```sudo cp ~/.config/sddm/themes/Sugar-Candy/theme.conf /usr/share/sddm/themes/Sugar-Candy/theme.conf.user```*
 
 ## License
 
