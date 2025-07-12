@@ -24,31 +24,26 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
 
     1. Replace the monitor name in ~/.config/hypr/hyprland.conf and ~/.config/hypr/hyprpaper.conf with the name outputted by `hyprctl monitors all`
 
-    2. Set the home and lockscreen wallpapers by creating the following symlinks:
+    2. Set the wallpapers with:
 
-      - ```
-        ln -s path-to-image ~/Pictures/home-wallpaper
+      - Home:
+        ```
+        ln -s absolute-path-to-image ~/Pictures/home-wallpaper
         ```
 
-      - ```
-        ln -s path-to-image ~/Pictures/lock-screen-wallpaper
+      - Lock screen:
+        ```
+        ln -s absolute-path-to-image ~/Pictures/lock-screen-wallpaper
+        ```
+    
+      - SDDM:
+        ```
+        sudo cp absolute-path-to-image /usr/share/sddm/themes/Sugar-Candy/Backgrounds/wallpaper
         ```
 
-    3. Set the SDDM wallpaper with the following:<br/><br/>
+    3. Add `--location` flag with a value (e.g. Postcode) to `wttrbar` command in ~/.config/waybar/config.jsonc for accurate weather
 
-      - ```
-        sudo cp -L ~/Pictures/lock-screen-wallpaper /usr/share/sddm/themes/Sugar-Candy/Backgrounds/
-        ```
-
-      - Then change the Background configuration in /usr/share/sddm/themes/Sugar-Candy/theme.conf.user to:
-
-        ```
-        Background="Backgrounds/lock-screen-wallpaper"
-        ```
-
-    4. Add `--location` flag with a value (e.g. Postcode) to `wttrbar` command in ~/.config/waybar/config.jsonc for accurate weather
-
-    5. Apply changes with `sudo systemctl restart sddm`
+    4. Apply changes with `sudo systemctl restart sddm`
 
     *Note: Some applications such as Discord appear pixelated on Wayland unless you add the `--enable-features=UseOzonePlatform --ozone-platform=wayland` flag to their executable. This can be done by adding a desktop entry with the flag to ~/.local/share/applications/*
 
