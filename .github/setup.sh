@@ -42,6 +42,7 @@ yay -Syu
 echo -e "\e[32mInstalling required packages\e[0m"
 yay -S --needed \
 	sddm \
+	sddm-theme-sugar-candy-git \
 	hyprland \
 	xorg-xwayland \
 	pipewire \
@@ -50,6 +51,7 @@ yay -S --needed \
 	xdg-desktop-portal-hyprland \
 	qt5-wayland \
 	qt6-wayland \
+	orchis-theme \
 	hyprpaper \
 	hypridle \
 	hyprlock \
@@ -77,6 +79,14 @@ yay -S --needed \
 	dunst \
 	neovim \
 	npm
+
+# Apply sddm theme
+echo -e "\e[32mApply sddm theme\e[0m"
+sudo ln -s ~/.config/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf.user
+echo -e "[Theme]\n\nCurrent=sugar-candy\n" | sudo tee /etc/sddm.conf > /dev/null
+
+# Apply gtk theme
+gsettings set org.gnome.desktop.interface gtk-theme Orchis-Dark
 
 # Enable network manager service for nm applet
 echo -e "\e[32mEnable and start NetworkManager service for NM applet\e[0m"
