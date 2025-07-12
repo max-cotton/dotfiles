@@ -67,7 +67,7 @@ yay -S --needed \
 	wttrbar \
 	wofi \
 	kitty \
-	dolphin \
+	nemo \
 	firefox \
 	cmus \
 	cava \
