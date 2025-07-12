@@ -14,25 +14,26 @@ if ! command -v yay > /dev/null 2>&1; then
 	rm -rf "$HOME/Downloads/yay"
 fi
 
-# Clone and checkout dotfiles
-if [ -d "$HOME/.dotfiles" ]; then
+# Check for files that would be overwritten
+if [ -f "$HOME/.bashrc" ]; then
+	echo -e "\e[31mError:\e[0m File .bashrc already exists, please remove or backup this file first"
+	exit 1
+elif [ -d "$HOME/.config" ]; then
+	echo -e "\e[31mError:\e[0m Directory .config already exists, please remove or backup this directory first"
+	exit 1
+elif [ -d "$HOME/.github" ]; then
+	echo -e "\e[31mError:\e[0m Directory .github already exists, please remove or backup this directory first"
+	exit 1
+elif [ -d "$HOME/.dotfiles" ]; then
 	echo -e "\e[31mError:\e[0m Directory .dotfiles already exists, please remove or backup this directory first"
 	exit 1
-else
-	echo -e "\e[32mCloning and checking out dotfiles\e[0m"
-	git clone --bare https://github.com/mcttn22/dotfiles.git "$HOME/.dotfiles"
-
-	if [ -f "$HOME/.bashrc" ]; then
-		echo -e "\e[31mError:\e[0m File .bashrc already exists, please remove or backup this file first"
-		exit 1
-	elif [ -d "$HOME/.github" ]; then
-		echo -e "\e[31mError:\e[0m Directory .github already exists, please remove or backup this directory first"
-		exit 1
-	fi
-
-	git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" checkout
-	git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" config --local status.showUntrackedFiles no
 fi
+
+# Clone and checkout dotfiles
+echo -e "\e[32mCloning and checking out dotfiles\e[0m"
+git clone --bare https://github.com/mcttn22/dotfiles.git "$HOME/.dotfiles"
+git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" checkout
+git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" config --local status.showUntrackedFiles no
 
 # Sync and update current packages
 echo -e "\e[32mSyncing and updating current packages\e[0m"
