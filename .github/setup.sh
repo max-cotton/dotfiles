@@ -82,7 +82,8 @@ yay -S --needed \
 
 # Apply sddm theme
 echo -e "\e[32mApply sddm theme\e[0m"
-sudo ln -s ~/.config/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf.user
+sudo ln -sf ~/.config/sddm/themes/sugar-candy/theme.conf /usr/share/sddm/themes/sugar-candy/theme.conf.user
+sudo ln -s ~/Pictures/lock-screen-wallpaper /usr/share/sddm/themes/sugar-candy/Backgrounds/lock-screen-wallpaper
 echo -e "[Theme]\n\nCurrent=sugar-candy\n" | sudo tee /etc/sddm.conf > /dev/null
 
 # Apply gtk theme
