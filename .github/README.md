@@ -24,7 +24,7 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
 
     1. Replace the monitor name in ~/.config/hypr/hyprland.conf and ~/.config/hypr/hyprpaper.conf with the name outputted by `hyprctl monitors all`
 
-    2. Set the home and lockscreen/sddm wallpapers by creating the following symlinks:
+    2. Set the home and lockscreen wallpapers by creating the following symlinks:
 
       - ```
         ln -s path-to-image ~/Pictures/home-wallpaper
