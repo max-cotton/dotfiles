@@ -22,6 +22,7 @@ if ! git clone --bare https://github.com/mcttn22/dotfiles.git "$HOME/.dotfiles";
 fi
 if ! git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" checkout; then
 	echo -e "\e[31mError:\e[0m Failed to checkout dotfiles"
+	rm -rf "$HOME/.dotfiles"
 	exit 1
 fi
 git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" config --local status.showUntrackedFiles no
