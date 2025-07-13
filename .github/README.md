@@ -16,7 +16,7 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
    bash <(curl https://raw.githubusercontent.com/mcttn22/dotfiles/refs/heads/main/.github/setup.sh)
    ```
 
-2. If you're using an Nvidia graphics card, switch to a new virtual console with `Ctrl+Alt+F3` and install a suitable driver using [the wiki](https://wiki.archlinux.org/title/NVIDIA). Then run `sudo systemctl restart sddm` to continue
+2. If you're using an Nvidia graphics card, switch to a new virtual console with `Ctrl+Alt+F3` and install a suitable driver using [the wiki](https://wiki.archlinux.org/title/NVIDIA). Then reboot with `sudo reboot` to continue
 
 3. Select "Hyprland" as the session (not "Hyprland (uwsm-managed)")
 
