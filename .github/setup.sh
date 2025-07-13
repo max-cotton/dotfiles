@@ -39,6 +39,10 @@ yay -S --needed \
 	hyprland \
 	xorg-xwayland \
 	pipewire \
+	pipewire-audio \
+	pipewire-alsa \
+	pipewire-pulse \
+	pipewire-jack \
 	wireplumber \
 	pavucontrol \
 	xdg-desktop-portal-hyprland \
@@ -67,6 +71,7 @@ yay -S --needed \
 	discord \
 	fastfetch \
 	nerd-fonts \
+	noto-fonts-emoji \
 	grim \
 	slurp \
 	dunst \
