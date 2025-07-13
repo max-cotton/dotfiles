@@ -42,7 +42,6 @@ yay -S --needed \
 	pipewire-audio \
 	pipewire-alsa \
 	pipewire-pulse \
-	pipewire-jack \
 	wireplumber \
 	pavucontrol \
 	xdg-desktop-portal-hyprland \
