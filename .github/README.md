@@ -8,7 +8,7 @@
 
 ## Installation
 
-The expected use case is an Arch Linux installation with Sudo setup for the user account. Then follow the steps below:
+The expected use case is an Arch Linux installation with Sudo setup for the user account. If you're using an Nvidia graphics card, make sure you've installed a suitable driver using [the wiki](https://wiki.archlinux.org/title/NVIDIA) and have rebooted since. Then follow the steps below:
 
 1. Run setup script with:
 
@@ -16,11 +16,9 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
    bash <(curl https://raw.githubusercontent.com/mcttn22/dotfiles/refs/heads/main/.github/setup.sh)
    ```
 
-2. If you're using an Nvidia graphics card, switch to a new virtual console with `Ctrl+Alt+F3` and install a suitable driver using [the wiki](https://wiki.archlinux.org/title/NVIDIA). Then reboot with `sudo reboot` to continue
+2. Select "Hyprland" as the session (not "Hyprland (uwsm-managed)")
 
-3. Select "Hyprland" as the session (not "Hyprland (uwsm-managed)")
-
-4. Apply the following manual configurations:
+3. Apply the following manual configurations:
 
     1. Replace the monitor name in ~/.config/hypr/hyprland.conf and ~/.config/hypr/hyprpaper.conf with the name outputted by `hyprctl monitors all`
 
