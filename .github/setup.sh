@@ -49,7 +49,6 @@ yay -S --needed \
 	qt6-wayland \
 	orchis-theme \
 	hyprpaper \
-	waypaper \
 	hypridle \
 	hyprlock \
 	wlogout \
