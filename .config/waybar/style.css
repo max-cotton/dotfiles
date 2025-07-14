@@ -1,22 +1,15 @@
 * {
-    border: none;
-    border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
     min-height: 0;
 }
 
 window#waybar {
-    background: rgba(43, 48, 59, 0.5);
-    color: white;
+    background: rgba(00, 00, 00, 0.8);
 }
 
 tooltip {
-  background: rgba(43, 48, 59, 0.5);
-  border: 1px solid rgba(100, 114, 125, 0.5);
-}
-tooltip label {
-  color: white;
+	border-radius: 5px;
+	background-color: #3b4252;
+	color: #e0e6f0;
 }
 
 #workspaces, #custom-updates, #cpu, #memory, #pulseaudio, #backlight, #battery, #custom-weather, #clock {
@@ -38,7 +31,7 @@ tooltip label {
 }
 
 #custom-updates.updated {
-    background-color: transparent;
+	background-color: transparent;
 }
 
 #custom-updates.has-updates {
@@ -83,7 +76,7 @@ tooltip label {
 
 @keyframes blink {
     to {
-        background-color: #eceff4;
+    	background-color: #eceff4;
         color: #2e3440;
     }
 }
