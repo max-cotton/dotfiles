@@ -20,7 +20,7 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
 
 3. Apply the following manual configurations:
 
-    1. Replace the monitor name in ~/.config/hypr/hyprland.conf with the name outputted by `hyprctl monitors all`
+    1. Replace the monitor details in ~/.config/hypr/hyprland.conf with the details outputted by `hyprctl monitors all`
 
     2. Set the wallpapers with:
 
