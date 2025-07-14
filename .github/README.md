@@ -43,7 +43,7 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
 
     4. Apply changes with `sudo systemctl restart sddm`
 
-    *Note: Some applications such as Discord appear pixelated on Wayland unless you add the `--enable-features=UseOzonePlatform --ozone-platform=wayland` flag to their executable. This can be done by adding a desktop entry with the flag to ~/.local/share/applications/*
+    *Note: Electron / Chromium based applications (e.g. Discord) require adding the `--enable-features=UseOzonePlatform --ozone-platform=wayland` flags to their executable for native Wayland support. This can be done by adding a desktop entry with the flags to ~/.local/share/applications/*
 
 ## Updating
 
