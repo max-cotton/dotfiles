@@ -24,10 +24,7 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
 
     2. Set the wallpapers with:
 
-      - Home:
-        ```
-        ln -s absolute-path-to-image ~/Pictures/home-wallpaper
-        ```
+      - Home: Run Waypaper with `Super+R`
 
       - Lock screen:
         ```
