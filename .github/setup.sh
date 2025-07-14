@@ -84,8 +84,9 @@ echo -e "\e[32mApply sddm theme\e[0m"
 sudo cp ~/.config/sddm/themes/Sugar-Candy/theme.conf /usr/share/sddm/themes/Sugar-Candy/theme.conf.user
 echo -e "[Theme]\n\nCurrent=Sugar-Candy\n" | sudo tee /etc/sddm.conf > /dev/null
 
-# Apply gtk theme
+# Apply gtk theme and font
 gsettings set org.gnome.desktop.interface gtk-theme Orchis-Dark
+gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font"
 
 # Enable network manager service for nm applet
 echo -e "\e[32mEnable and start NetworkManager service for NM applet\e[0m"
