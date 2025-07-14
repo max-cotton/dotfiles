@@ -51,6 +51,7 @@ yay -S --needed \
 	hyprpaper \
 	hypridle \
 	hyprlock \
+	wlogout \
 	hyprpolkitagent \
 	brightnessctl \
 	networkmanager \

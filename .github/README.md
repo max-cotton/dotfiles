@@ -41,7 +41,7 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
 
     3. Add `--location` flag with a value (e.g. Postcode) to `wttrbar` command in ~/.config/waybar/config.jsonc for accurate weather
 
-    4. Apply changes with `sudo systemctl restart sddm`
+    4. Apply changes by exiting and re-entering Hyprland with Super+L
 
     *Note: Electron / Chromium based applications (e.g. Discord) require adding the `--enable-features=UseOzonePlatform --ozone-platform=wayland` flags to their executable for native Wayland support. This can be done by adding a desktop entry with the flags to ~/.local/share/applications/*
 
