@@ -1,2 +1,3 @@
 colorscheme green
+set stop_after_queue=true
 
