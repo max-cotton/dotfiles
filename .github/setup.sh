@@ -84,6 +84,7 @@ sudo cp ~/.config/sddm/themes/Sugar-Candy/theme.conf /usr/share/sddm/themes/Suga
 echo -e "[Theme]\n\nCurrent=Sugar-Candy\n" | sudo tee /etc/sddm.conf > /dev/null
 
 # Apply gtk theme and font
+echo -e "\e[32mApply gtk theme and font\e[0m"
 gsettings set org.gnome.desktop.interface gtk-theme Orchis-Dark
 gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font"
 
