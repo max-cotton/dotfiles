@@ -1,13 +1,8 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
 alias dotfiles="git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 # Function to get the current Git branch
@@ -17,5 +12,6 @@ function parse_git_branch {
     	echo "($branch)"
   	fi
 }
+
 PS1='\[\e[32m\]\u@\h\[\e[0m\]:\[\e[34m\]\w\[\e[0m\]\[\e[31m\]$(parse_git_branch)\[\e[0m\]\$ '
 
