@@ -52,7 +52,7 @@ yay -S --needed \
 	hypridle \
 	hyprlock \
 	wlogout \
-	hyprpolkitagent \
+	polkit-gnome \
 	brightnessctl \
 	networkmanager \
 	network-manager-applet \
