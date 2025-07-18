@@ -76,6 +76,7 @@ yay -S --needed \
 	slurp \
 	dunst \
 	neovim \
+	ripgrep \
 	npm
 
 # Apply sddm theme
