@@ -93,6 +93,10 @@ gsettings set org.gnome.desktop.interface font-name "JetBrainsMono Nerd Font"
 echo -e "\e[32mEnable and start NetworkManager service for NM applet\e[0m"
 sudo systemctl enable --now NetworkManager
 
+# Start pipewire pulse service
+echo -e "\e[32mStart pipewire pulse service\e[0m"
+systemctl start --user pipewire-pulse
+
 # Enable sddm service
 echo -e "\e[32mEnable and start sddm service\e[0m"
 sudo systemctl enable --now sddm
