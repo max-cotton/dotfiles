@@ -16,6 +16,8 @@ return {
 					documentation = cmp.config.window.bordered()
 				},
 				mapping = cmp.mapping.preset.insert({
+					["<Tab>"] = cmp.mapping.select_next_item(),
+					["<S-Tab>"] = cmp.mapping.select_prev_item(),
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-Space>"] = cmp.mapping.complete(),
@@ -50,6 +52,9 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 			require("lspconfig")["gopls"].setup {
+				capabilities = capabilities
+			}
+			require("lspconfig")["pyright"].setup {
 				capabilities = capabilities
 			}
 		end
