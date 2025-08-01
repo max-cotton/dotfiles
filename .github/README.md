@@ -13,7 +13,7 @@ The expected use case is an Arch Linux installation with Sudo setup for the user
 1. Run setup script with:
 
    ```
-   bash <(curl https://raw.githubusercontent.com/mcttn22/dotfiles/refs/heads/main/.github/setup.sh)
+   bash <(curl https://raw.githubusercontent.com/max-cotton/dotfiles/refs/heads/main/.github/setup.sh)
    ```
 
 2. Select "Hyprland" as the session (not "Hyprland (uwsm-managed)")

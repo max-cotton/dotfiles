@@ -16,7 +16,7 @@ fi
 
 # Clone and checkout dotfiles
 echo -e "\e[32mCloning and checking out dotfiles\e[0m"
-if ! git clone --bare https://github.com/mcttn22/dotfiles.git "$HOME/.dotfiles"; then
+if ! git clone --bare https://github.com/max-cotton/dotfiles.git "$HOME/.dotfiles"; then
 	echo -e "\e[31mError:\e[0m Failed to clone dotfiles repository"
 	exit 1
 fi
