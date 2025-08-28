@@ -39,6 +39,7 @@
 		"format-connected": "󰂱",
 		"format-disabled": "󰂲",
 		"tooltip-format": "{device_alias}",
+		"tooltip-format-connected-battery": "{device_alias} {device_battery_percentage}% 󰥉",
 		"on-click": "blueberry"
 	},
 	"backlight": {
