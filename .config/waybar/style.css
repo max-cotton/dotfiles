@@ -12,7 +12,7 @@ tooltip {
 	color: #e0e6f0;
 }
 
-#workspaces, #custom-updates, #cpu, #memory, #pulseaudio, #backlight, #battery, #custom-weather, #clock {
+#workspaces, #custom-updates, #cpu, #memory, #pulseaudio, #bluetooth, #backlight, #battery, #custom-weather, #clock {
     padding: 0 10px;
 	margin: 2 2px;
 	border-radius: 5px;
@@ -47,6 +47,11 @@ tooltip {
 #pulseaudio.muted {
     background-color: #bf616a;
     color: #eceff4;
+}
+
+#bluetooth {
+    background-color: #3b4252;
+    color: #e0e6f0;
 }
 
 #cpu {

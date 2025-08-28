@@ -2,7 +2,7 @@
     "layer": "top",
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["tray"],
-    "modules-right": ["custom/updates", /*"cpu", */"memory", "pulseaudio", "backlight", "battery", "custom/weather", "clock"],
+    "modules-right": ["custom/updates", /*"cpu", */"memory", "pulseaudio", "bluetooth", "backlight", "battery", "custom/weather", "clock"],
 	"hyprland/workspaces": {
 		"format": "{icon}",
 		"format-icons": {
@@ -34,6 +34,13 @@
         "format-muted": "{volume}% ",
         "on-click": "pavucontrol"
     },
+	"bluetooth": {
+		"format": "󰂯",
+		"format-connected": "󰂱",
+		"format-disabled": "󰂲",
+		"tooltip-format": "{device_alias}",
+		"on-click": "blueberry"
+	},
 	"backlight": {
         "format": "{percent}% {icon}",
 		"format-icons": ["󰃞", "󰃟", "󰃠"]

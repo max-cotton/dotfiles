@@ -44,6 +44,9 @@ yay -S --needed \
 	pipewire-pulse \
 	wireplumber \
 	pavucontrol \
+	bluez \
+	bluez-utils \
+	blueberry \
 	xdg-desktop-portal-hyprland \
 	qt5-wayland \
 	qt6-wayland \
@@ -96,6 +99,10 @@ sudo systemctl enable --now NetworkManager
 # Start pipewire pulse service
 echo -e "\e[32mStart pipewire pulse service\e[0m"
 systemctl start --user pipewire-pulse
+
+# Enable bluetooth service
+echo -e "\e[32mStart bluetooth service\e[0m"
+sudo systemctl enable --now bluetooth
 
 # Enable sddm service
 echo -e "\e[32mEnable and start sddm service\e[0m"
