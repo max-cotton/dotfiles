@@ -32,7 +32,7 @@
         "format": "{volume}% {icon}",
 		"format-icons": ["", "", ""],
         "format-muted": "{volume}% ",
-        "on-click": "pavucontrol"
+        "on-click": "GTK_THEME=Orchis-Dark pavucontrol"
     },
 	"bluetooth": {
 		"format": "󰂯",
